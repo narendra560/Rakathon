@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Name</title>
+    <link rel="stylesheet" href="product-styles.css">
+</head>
+<body>
+    <div class="header">
+        <a href="#" class="logo">FURNITURE HUB</a>
+        <div class="search-bar">
+            <div class="search-icon">
+                <img src="search.png" alt="Search">
+            </div>
+            <input type="text" placeholder="Search for furniture...">
+            <div class="camera-icon" id="camera-icon">
+                <img src="camera.png" alt="Camera">
+            </div>
+        </div>
+        <div class="icons">
+            <a href="#" class="profile-icon"><img src="profile.png" alt="Profile"></a>
+            <a href="#" class="wishlist-icon"><img src="wishlist_icon.png" alt="Wishlist"></a>
+            <a href="#" class="cart-icon"><img src="shopping-cart_icon.png" alt="Shopping Cart"></a>
+        </div>
+    </div>
+
+<!-- Popup Container -->
+    <div id="popup-container" class="popup">
+        <div class="popup-content">
+            <h2 class="gradient-text">Image Options</h2>
+            <p class="gradient-text">Choose an option:</p>
+            <button id="upload-image" class="styled-button upload-button">
+                <img src="upload.png" alt="Upload"> Upload Image
+            </button>
+            <button id="generate-image" class="styled-button generate-button">
+                <img src="generate.png" alt="Generate"> Generate Image
+            </button>
+            <div id="generate-image-options" class="hidden">
+                <!-- The "Image uploaded successfully" message will be added here -->
+                <label for="image-upload" class="gradient-text">Choose an image:</label>
+                <input type="file" id="image-upload" accept="image/*">
+                <label for="prompt" class="gradient-text">Enter a prompt:</label>
+                <input type="text" id="prompt" placeholder="Type your prompt...">
+            </div>
+            <button id="close-popup" class="styled-button close-button">
+                <span class="button-icon">✖</span> Close
+            </button>
+        </div>
+    </div>
+
+    <!-- ... (previous HTML code) ... -->
+
+    <div class="product-page">
+        <div class="product-image">
+            <img src="bed3.jpg" alt="Product Name" class="product-image">
+        </div>
+        
+        <div class="product-details">
+            <h1>Product Name</h1>
+            <p class="price">$999.99</p>
+            <button class="add-to-cart-button">Add to Cart</button>
+            
+            <div class="product-options">
+                <p>Get it by 12 Sep to 600043. <a href="#">Change pincode</a></p>
+                <p>Condition: Fully Remanufactured. <a href="#">Know more</a></p>
+                <p>No-Cost EMIs available on orders above ₹5,000 at checkout page. <a href="#">View Plans</a></p>
+            </div>
+        </div>
+    </div>
+
+<!-- ... (remaining HTML code) ... -->
+
+    
+
+</body>
+</html>

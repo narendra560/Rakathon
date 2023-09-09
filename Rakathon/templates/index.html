@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="header">
+        <a href="#" class="logo">FURNITURE HUB</a>
+        <div class="search-bar">
+            <div class="search-icon">
+                <img src="{{ url_for('static', filename='images/search.png') }}" alt="Search">
+            </div>
+            <input type="text" placeholder="Search for furniture...">
+            <div class="camera-icon" id="camera-icon">
+                <img src="{{ url_for('static', filename='images/camera.png') }}" alt="Camera">
+            </div>
+        </div>
+        <div class="icons">
+            <a href="#" class="profile-icon"><img src="{{ url_for('static', filename='images/profile.png') }}" alt="Profile"></a>
+            <a href="#" class="wishlist-icon"><img src="{{ url_for('static', filename='images/wishlist_icon.png') }}" alt="Wishlist"></a>
+            <a href="#" class="cart-icon"><img src="{{ url_for('static', filename='images/shopping-cart_icon.png')}}" alt="Shopping Cart"></a>
+        </div>
+    </div>
+
+<!-- Popup Container -->
+    <!-- Popup Container -->
+    <div id="popup-container" class="popup">
+        <div class="popup-content">
+            <h2 class="gradient-text">Image Options</h2>
+            <p class="gradient-text">Choose an option:</p>
+            <input type="file" id="fileInput" style="display: none;">
+            <button id="upload-image" class="styled-button upload-button">
+                <img src="{{ url_for('static', filename='images/upload.png') }}" alt="Upload"> Upload Image
+            </button>
+            <button id="generate-image" class="styled-button generate-button">
+                <img src="{{ url_for('static', filename='images/generate.png') }}" alt="Generate"> Generate Image
+            </button>
+            <div id="generate-image-options" class="hidden">
+                <!-- The "Image uploaded successfully" message will be added here -->
+                <label for="image-upload" class="gradient-text">Choose an image:</label>
+                <input type="file" id="image-upload" accept="image/*">
+                <label for="prompt" class="gradient-text">Enter a prompt:</label>
+                <input type="text" id="prompt" placeholder="Type your prompt...">
+            </div>
+            <button id="close-popup" class="styled-button close-button">
+                <span class="button-icon">✖</span> Close
+            </button>
+        </div>
+    </div>
+
+
+    <div class="body-content">
+        <h2 class="buy-furniture-text">BUY FURNITURE</h2>
+        <div class="horizontal-component">
+            <div class="category-logo">
+                <img src="{{ url_for('static', filename='images/living_icon.png') }}" alt="Living Room">
+                <p>Living Room</p>
+            </div>
+            <div class="category-logo">
+                <img src="{{ url_for('static', filename='images/bedroom_icon.png') }}" alt="Bedroom">
+                <p>Bedroom</p>
+            </div>
+            <div class="category-logo">
+                <img src="{{ url_for('static', filename='images/study_icon.png') }}" alt="Study">
+                <p>Study</p>
+            </div>
+            <div class="category-logo">
+                <img src="{{ url_for('static', filename='images/dining-table.png') }}" alt="Dining">
+                <p>Dining</p>
+            </div>
+            <div class="category-logo">
+                <img src="{{ url_for('static', filename='images/table_icon.png') }}" alt="Tables">
+                <p>Tables</p>
+            </div>
+            <div class="category-logo">
+                <img src="{{ url_for('static', filename='images/chairs.png') }}" alt="Chairs">
+                <p>Chairs</p>
+            </div>        
+        </div>
+
+        <div class="deals-and-offers-component gradient-background">
+            <div class="view-all">
+                <a href="#">View All</a>
+            </div>
+
+            <div class="top-text">
+                <h3>Special Offers</h3>
+                <p>Check out our latest deals and discounts!</p>
+            </div>
+
+            <!-- Navigation arrows -->
+            <div class="navigation-arrow left-arrow" id="left-arrow">
+                <img src="{{ url_for('static', filename='images/left-arrow.png') }}" alt="Left Arrow">
+            </div>
+            
+            <!-- Products container -->
+            <div class="products-container">
+                <div class="product">
+                    <img src="{{ url_for('static', filename='images/bed2.jpg') }}" alt="bed2">
+                    <p>Product 1</p>
+                    <span class="offer">50% OFF</span>
+                </div>
+            
+                <div class="product">
+                    <img src="{{ url_for('static', filename='images/bed3.jpg') }}" alt="bed3">
+                    <p>Product 2</p>
+                    <span class="offer">30% OFF</span>
+                </div>
+            
+                <div class="product">
+                    <img src="{{ url_for('static', filename='images/bed4.jpg') }}" alt="bed4">
+                    <p>Product 3</p>
+                    <span class="offer">50% OFF</span>
+                </div>
+            
+                <div class="product">
+                    <img src="{{ url_for('static', filename='images/bed5.jpg') }}" alt="bed5">
+                    <p>Product 4</p>
+                    <span class="offer">30% OFF</span>
+                </div>
+            
+                <div class="product">
+                    <img src="{{ url_for('static', filename='images/bed6.jpg') }}" alt="bed6">
+                    <p>Product 5</p>
+                    <span class="offer">50% OFF</span>
+                </div>
+            
+                <div class="product">
+                    <img src="{{ url_for('static', filename='images/bed7.jpg') }}" alt="bed7">
+                    <p>Product 6</p>
+                    <span class="offer">50% OFF</span>
+                </div>
+                <!-- Add more product divs as needed -->
+            </div>
+            
+            <!-- Navigation arrows -->
+            <div class="navigation-arrow right-arrow" id="right-arrow">
+                <img src="{{ url_for('static', filename='images/right-arrow.png') }}" alt="Right Arrow">
+            </div>
+            
+            <!-- View All button -->
+            
+        </div>
+
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

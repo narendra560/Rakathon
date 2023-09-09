@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+.header {
+    background-color: #ffffff; /* White background */
+    border-bottom: 2px solid #87CEEB; /* Light blue border */
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: normal; /* Remove bold */
+    text-decoration: none;
+    font-family: 'Arial', sans-serif; /* Change the font family to Arial or your desired font */
+    letter-spacing: 2px; /* Adjust letter spacing as needed */
+    background: linear-gradient(45deg, #ff6600, #00ccff); /* Gradient background color */
+    -webkit-background-clip: text; /* Apply gradient to text */
+    background-clip: text;
+    color: transparent; /* Hide original text color */
+    margin-left: 20px; /* Add space to the left */
+}
+
+.search-bar {
+    display: flex;
+    border: 2px solid #87CEEB; /* Light blue border for search bar */
+    border-radius: 25px; /* Rounded corners for the search bar */
+    overflow: hidden;
+    background-color: #fff; /* Background color for the search bar */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    width: 600px; /* Increase the width as needed */
+    /* Adjust margin to add space between icons */
+    margin-right: 20px; /* Add space to the right */
+}
+
+.search-icon {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #87CEEB; /* Light blue background for search icon */
+    border-radius: 25px 0 0 25px; /* Rounded corners for the left side */
+}
+
+.search-icon img {
+    width: 25px; /* Adjust the width as needed */
+    height: 25px; /* Adjust the height as needed */
+}
+
+input[type="text"] {
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    outline: none; /* Remove input focus outline */
+    flex-grow: 1;
+}
+
+.camera-icon {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #87CEEB; /* Light blue background for camera icon */
+    border-radius: 0 25px 25px 0; /* Rounded corners for the right side */
+}
+
+.camera-icon img {
+    width: 25px; /* Adjust the width as needed */
+    height: 25px; /* Adjust the height as needed */
+}
+
+.icons {
+    margin-right: 30px; /* Add space to the right of icons */
+}
+
+.icons a {
+    text-decoration: none;
+    margin-left: 30px; /* Adjust spacing between icons */
+}
+
+.icons a img {
+    width: 30px; /* Adjust the width of icons */
+    height: 30px; /* Adjust the height of icons */
+}
+
+
+/* -------------- */
+
+.popup {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out; /* Add fade-in/fade-out animation */
+}
+
+
+
+/* ... (previous CSS styles) ... */
+
+.popup-content {
+    background-color: #ffffff;
+    padding: 40px; /* Increase the padding to create a larger popup */
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    width: auto; /* Remove fixed width */
+    max-width: 1250px; /* Maximum width of 1250px */
+    max-height: 1250px; /* Maximum height of 1250px */
+    overflow-y: auto; /* Add vertical scrollbar if content exceeds the max height */
+}
+
+/* ... (previous CSS styles) ... */
+
+
+/* ... (previous CSS styles) ... */
+
+
+.popup h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333; /* Text color */
+}
+
+.popup button {
+    background-color: #3498db;
+    color: #000000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.popup button:hover {
+    background-color: #2980b9;
+}
+
+/* Style the input field */
+.popup input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Hide and show elements inside the popup */
+.hidden {
+    display: none;
+}
+
+/* Add an animation for the popup */
+.popup-animation {
+    animation: fadeInOut 0.5s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.gradient-text {
+    background: linear-gradient(45deg, #ff6600, #00ccff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.close-button {
+    background-color: #e74c3c;
+}
+
+
+
+.upload-button {
+    color: #000000; /* Dark text color */
+    padding: 15px 30px; /* Padding for the button */
+    border: none;
+    border-radius: 50px; /* Rounded shape */
+    font-family: 'Arial', sans-serif; /* Change the font family to your desired font */
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s, border 0.3s; /* Add hover transitions */
+    border: 2px solid transparent; /* Transparent border */
+    background-image: linear-gradient(45deg, #ffffff, #ffffff); /* Gradient border */
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.upload-button:hover {
+    
+    color: #569db9; /* Dark text color on hover */
+    border: 2px solid #55aacc; /* Gradient border color on hover */
+    transform: scale(1.05); /* Slight scale-up effect on hover */
+}
+
+.generate-button {
+    color: #040404; /* Dark text color */
+    padding: 15px 30px; /* Padding for the button */
+    border: none;
+    border-radius: 50px; /* Rounded shape */
+    font-family: 'Arial', sans-serif; /* Change the font family to your desired font */
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s, border 0.3s; /* Add hover transitions */
+    
+    background-image: linear-gradient(45deg, #ffffff, #ffffff); Gradient border;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.generate-button:hover {
+    color: #df9b57; /* Dark text color on hover */
+    border: 2px solid #ffaa55; /* Gradient border color on hover */
+    transform: scale(1.05); /* Slight scale-up effect on hover */
+}
+
+
+
+
+.upload-button img,
+.generate-button img {
+    width: 24px; /* Adjust the width of the icons as needed */
+    height: 24px; /* Adjust the height of the icons as needed */
+    margin-right: 10px; /* Add spacing between the icon and text */
+}
+
+
+.styled-button {
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.styled-button:hover {
+    filter: brightness(1.1); /* Slight hover effect */
+}
+
+.button-icon {
+    margin-right: 10px;
+    font-size: 20px; /* Adjust the icon size as needed */
+}
+
+/* Your existing CSS styles */
+
+/* Add styles for the horizontal-component and center it */
+.body-content {
+    padding: 20px; /* Add some padding to the body content */
+}
+
+/* Your existing CSS styles */
+
+
+
+.buy-furniture-text {
+    text-align: center; /* Center the text */
+    margin-bottom: 10px; /* Add spacing below the text */
+    font-size: 40px; /* Adjust the font size as needed */
+    letter-spacing: 5px;
+    background: linear-gradient(45deg, #0091ff, #00ff0d6f); /* Gradient background color */
+    -webkit-background-clip: text; /* Apply gradient to text */
+    background-clip: text;
+    color: transparent; /* Hide original text color */
+    font-family: 'Quicksand', sans-serif;/* Change the font family to your desired font */
+}
+
+.horizontal-component {
+    display: flex;
+    gap: 80px; /* Increase the gap between category logos to 80px */
+    align-items: center;
+    justify-content: center;
+}
+
+.category-logo {
+    text-align: center;
+    cursor: pointer;
+}
+
+.category-logo img {
+    width: 100px;
+    height: auto;
+}
+
+.category-logo p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* Styling for the "Deals and Offers Component" with a gradient background */
+.deals-and-offers-component.gradient-background {
+    position: relative;
+    width: auto;
+    height: 450px;
+    overflow-x: auto;
+    background: linear-gradient(45deg, #ff6600, #00ccff); /* Gradient background color */
+    color: white; /* Text color */
+    text-align: center; /* Center-align text */
+    padding-top: 40px; /* Add vertical padding */
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex; /* Use flex to center its contents vertically */
+    flex-direction: column; /* Center vertically */ 
+    justify-content: center; /*Center vertically */
+}
+
+.deals-and-offers-component {
+    position: relative;
+}
+
+/* Navigation arrows */
+.navigation-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+    
+    padding: 5px;
+    border-radius: 40%;
+}
+
+.left-arrow {
+    left: 0;
+}
+
+.right-arrow {
+    right: 0;
+}
+
+.navigation-arrow img {
+    width: 40px; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+    /* Add any other styling you want for the images */
+}
+
+/* Products container */
+.products-container {
+    margin-top: 20px;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    padding-top: 5px; /* Add vertical padding */
+    padding-left: 35px;
+    justify-content: space-between; /* Space between products */
+    align-items: center; /* Center-align products vertically */
+}
+
+/* Styling for each product item */
+.product {
+    text-align: center;
+    margin-right: 20px; /* Add space between products */
+    width: 100%;
+    height: 100%; /* Set a fixed height for product images */
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.product img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%; /* Make sure the image takes the full width of the container */
+    height: 70%; /* Automatically adjust the height to maintain aspect ratio */
+}
+
+/* Add a CSS class for product hover */
+.product:hover {
+    transform: scale(1.10); /* Increase the scale on hover */
+    transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+
+
+.offer {
+    background-color: #fff; /* Background color for offer text */
+    color: #ff6600; /* Text color for offer text */
+    padding: 5px 10px; /* Add padding to highlight the offer */
+    border-radius: 5px; /* Rounded corners for the offer box */
+    border: 1px solid rgb(255, 119, 0);
+}
+
+/* View All button */
+.view-all {
+    text-align: right;
+    font-family:'Times New Roman', Times, serif;
+    letter-spacing: 1px;
+}
+
+.view-all a {
+    text-decoration: none;
+    background-color: #cf641c; /* Background color for the button */
+    color: #fff; /* Text color for the button */
+    padding: 10px 25px; /* Add padding to the button */
+    border-radius: 24px; /* Rounded corners for the button */
+    border: 1px solid rgb(239, 193, 136);
+    transition: background-color 0.3s;
+    
+}
+
+.view-all a:hover {
+    background-color: #ffffff; /* Background color for the button on hover */
+    color: #ff6600;
+    border: 1px solid orangered;
+    font-weight: bold;
+}
+
+/* Styles for left side text */
+/* Styles for text on top of product container */
+/* Styles for text on top of product container */
+.top-text {
+    position: absolute;
+    top: 5px; /* Adjust the top position as needed */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%);
+    color: #fff; /* Text color */
+    text-align: center; /* Center-align text */
+    z-index: 1; /* Ensure text is above the arrows */
+}
+
+.top-text h3 {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold; /* Make the font bold if desired */
+    font-size: 30px; /* Adjust the font size as needed */
+    margin-bottom: 10px; /* Add spacing below the heading */
+    text-transform: uppercase; /* Convert text to uppercase */
+    letter-spacing: 2px; /* Adjust letter spacing as needed */
+    
+}
+
+.top-text p {
+    font-family: 'Montserrat', sans-serif; /* Change the font family to your desired font */
+    font-size: 12px; /* Adjust the font size as needed */
+    line-height: 0.5; /* Adjust line height for readability */
+}
+
